@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const app = express()
 const shortUrl = require('./models/shortUrl.js')
 const Users = require('./models/users.js')
-const url = 'mongodb://localhost:27017/node-mongo'
+const url = "mongodb+srv://new_user:pragati456@cluster0.xxmjo.mongodb.net/node-mongo?retryWrites=true&w=majority"
+const PORT = process.env.PORT
 const passport  = require('passport')
 const sessions = require('express-session')
 const flash = require('connect-flash')
@@ -182,6 +183,6 @@ app.get('/:shortUrl', async (req, res) => {
  
  
  
-app.listen(process.env.port || 3000,()=>{
+app.listen(PORT || 8080,()=>{
    console.log('server started')
 })
