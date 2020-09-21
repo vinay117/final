@@ -182,6 +182,6 @@ app.get('/:shortUrl', async (req, res) => {
  
  
  
-app.listen(process.env.port!!3000,()=>{
+app.listen(process.env.port || 3000,()=>{
    console.log('server started')
 })
